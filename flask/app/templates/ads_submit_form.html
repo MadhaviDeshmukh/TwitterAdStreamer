@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Submit twiter ads</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Please enter the ad details</h1>
+            </div>
+            <div id="content">
+		{% if ads is not none %}   
+    			{{ ads }}
+		{%endif %}
+                <form method="post" action="{{ url_for('ingest_ads') }}">
+                  <label for="title">Ad Title:</label>
+                  <input type="text" name="adtitle" /><br />
+                  <label for="keywords">Ad Keywords (comma separated):</label>
+                  <input type="text" name="adkeywords" /><br />
+                  <label for="keywords">Ad landing page url:</label>
+                  <input type="text" name="adurl" /><br />
+                  <label for="keywords">Bid amount:</label>
+                  <input type="text" name="bid" /><br />
+                  <label for="keywords">Ad expiry in seconds:</label>
+                  <input type="text" name="ttl" /><br />
+                  <input type="submit" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

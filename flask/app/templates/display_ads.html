@@ -1,0 +1,37 @@
+ <html>
+    <head>
+        <title>Ads matched with the given tweets</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Tweets:</h1>
+            </div>
+            <div id="content">
+                <strong>{{text}}</strong>
+            </div>
+            <div class="title">
+                <h1>Extracted Keywords:</h1>
+            </div>
+            <div id="content">
+                <strong>{{keywords}}</strong>
+            </div>
+            <div class="title">
+                <h1>List of ads:</h1>
+            </div>
+            <div id="content">
+		{% for ad in ads %}
+			<div class="twitad">
+				<div class="adtitle"> {{ ad["_source"]["title"] }} </div>
+				<div class="adurl"> {{ ad["_source"]["url"] }} </div>
+				<div class="adkeywords"> {{ ad["_source"]["keywords"] }} </div>
+			</div>
+			<dl>
+      		{% endfor %}
+
+		</dl>
+            </div>
+        </div>
+    </body>
+</html>

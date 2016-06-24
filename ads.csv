@@ -1,0 +1,7 @@
+#action, title, keywords, bid, ttl, url
+"a","Great home in Palo Alto","PaloAlto, Palo Alto",5,300,"www.yahoo.com"
+"a","Great home in Dublin","Dublin",15,300,"www.yahoo.com"
+"a","Second Great home in Palo Alto","PaloAlto, Palo Alto",4,200,"www.yahoo.com"
+"d","Second great home in Dublin","Dublin",10,100,"www.yahoo.com"
+"u","Great great homes in Sunnyvale","Sunnyvale",10,100,"www.Sunnyvale.com"
+"a","Great great homes in San Jose","SanJose",10,100,"www.SanJose.com"
